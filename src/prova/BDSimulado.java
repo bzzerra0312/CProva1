@@ -124,12 +124,42 @@ public class BDSimulado {
 		
 		
 				}
-	
+	 public ArrayList<Ligacao> ligacoesPorCliente (String nomeCliente){
+	    	ArrayList<Ligacao> resultado = new ArrayList<Ligacao>();
+	    	
+	    	for (int i = 0; i < this.ligacoes.size(); i++) {
+	    		if (this.ligacoes.get(i).getCliente().getNome().equals(nomeCliente)) {
+					resultado.add(this.ligacoes.get(i));
+				}
+				
+			}
+	    	return resultado;  
 			
 
 		
 	}
+	 public int ligacoesPorUF(String UF){
+	    	int resultado = 0;
+	    	
+	    	for (int i = 0; i < this.ligacoes.size(); i++) {
+				if (this.ligacoes.get(i).getCliente().getUF().equals(UF)) {
+					resultado++;
+				}
+			}
+	    	
+	    	return resultado;
+}
+
+
+				
 			
+			
+		
+		 
+	 }
+	 
+
+
 		
 		
 	
